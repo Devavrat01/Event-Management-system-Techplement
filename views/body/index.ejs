@@ -1,0 +1,240 @@
+
+<% layout('/layouts/boilerplate') %>
+<!-- Header with Logo, Navigation, Search Bar, Login, and Signup Buttons -->
+<header>
+    <div class="logo">Eventify</div>
+    <nav>
+        <!-- Search Bar -->
+        <input type="text" id="searchBar" placeholder="Search events..." onkeyup="filterEvents()">
+
+        <!-- Filter by Date -->
+        <select id="dateFilter" onchange="filterEvents()">
+            <option value="">All Dates</option>
+            <option value="2024-08-27">2024-08-27</option>
+            <option value="2024-09-15">2024-09-15</option>
+            <!-- Add more date options as needed -->
+        </select>
+
+        <!-- Filter by Category -->
+        <select id="categoryFilter" onchange="filterEvents()">
+            <option value="">All Categories</option>
+            <option value="music">Music</option>
+            <option value="tech">Tech</option>
+            <!-- Add more category options as needed -->
+        </select>
+
+        <!-- Filter by Location -->
+        <select id="locationFilter" onchange="filterEvents()">
+            <option value="">All Locations</option>
+            <option value="new york">New York, NY</option>
+            <option value="san francisco">San Francisco, CA</option>
+            <!-- Add more location options as needed -->
+        </select>
+
+        <!-- Login and Signup Buttons -->
+        <a href="/login"><button>Login</button></a>
+        <a href="/signup"><button>sign Up</button></a>
+    </nav>
+</header>
+
+<!-- Event Listing Section -->
+<section class="event-list" id="eventList">
+    <div class="event-card" data-date="2024-08-27" data-category="music" data-location="new york">
+        <h2>Concert Night</h2>
+        <p>Date: 2024-08-27</p>
+        <p>Location: New York, NY</p>
+        <p>Description: Enjoy a night of live music and entertainment.</p>
+        <p>Tickets Available: Yes</p>
+    </div>
+    <div class="event-card" data-date="2024-09-15" data-category="tech" data-location="san francisco">
+        <h2>Tech Conference 2024</h2>
+        <p>Date: 2024-09-15</p>
+        <p>Location: San Francisco, CA</p>
+        <p>Description: A conference for tech enthusiasts and professionals.</p>
+        <p>Tickets Available: No</p>
+    </div>
+    <div class="event-card" data-date="2024-08-27" data-category="music" data-location="new york">
+      <h2>Concert Night</h2>
+      <p>Date: 2024-08-27</p>
+      <p>Location: New York, NY</p>
+      <p>Description: Enjoy a night of live music and entertainment.</p>
+      <p>Tickets Available: Yes</p>
+  </div>
+
+  <!-- Event Card 2 -->
+  <div class="event-card" data-date="2024-09-15" data-category="tech" data-location="san francisco">
+      <h2>Tech Conference 2024</h2>
+      <p>Date: 2024-09-15</p>
+      <p>Location: San Francisco, CA</p>
+      <p>Description: A conference for tech enthusiasts and professionals.</p>
+      <p>Tickets Available: No</p>
+  </div>
+
+  <!-- Event Card 3 -->
+  <div class="event-card" data-date="2024-10-10" data-category="art" data-location="los angeles">
+      <h2>Art Exhibition</h2>
+      <p>Date: 2024-10-10</p>
+      <p>Location: Los Angeles, CA</p>
+      <p>Description: An exhibition featuring contemporary artists.</p>
+      <p>Tickets Available: Yes</p>
+  </div>
+
+  <!-- Event Card 4 -->
+  <div class="event-card" data-date="2024-11-05" data-category="sports" data-location="chicago">
+      <h2>Marathon 2024</h2>
+      <p>Date: 2024-11-05</p>
+      <p>Location: Chicago, IL</p>
+      <p>Description: Participate in the annual Chicago marathon event.</p>
+      <p>Tickets Available: Yes</p>
+  </div>
+
+  <!-- Event Card 5 -->
+  <div class="event-card" data-date="2024-12-25" data-category="holiday" data-location="miami">
+      <h2>Holiday Gala</h2>
+      <p>Date: 2024-12-25</p>
+      <p>Location: Miami, FL</p>
+      <p>Description: Celebrate the holiday season with a grand gala.</p>
+      <p>Tickets Available: No</p>
+  </div>
+  <div class="event-card" data-date="2024-08-27" data-category="music" data-location="new york">
+    <h2>Concert Night</h2>
+    <p>Date: 2024-08-27</p>
+    <p>Location: New York, NY</p>
+    <p>Description: Enjoy a night of live music and entertainment.</p>
+    <p>Tickets Available: Yes</p>
+</div>
+
+<!-- Event Card 2 -->
+<div class="event-card" data-date="2024-09-15" data-category="tech" data-location="san francisco">
+    <h2>Tech Conference 2024</h2>
+    <p>Date: 2024-09-15</p>
+    <p>Location: San Francisco, CA</p>
+    <p>Description: A conference for tech enthusiasts and professionals.</p>
+    <p>Tickets Available: No</p>
+</div>
+
+<!-- Event Card 3 -->
+<div class="event-card" data-date="2024-10-10" data-category="art" data-location="los angeles">
+    <h2>Art Exhibition</h2>
+    <p>Date: 2024-10-10</p>
+    <p>Location: Los Angeles, CA</p>
+    <p>Description: An exhibition showcasing contemporary art pieces.</p>
+    <p>Tickets Available: Yes</p>
+</div>
+
+<!-- Event Card 4 -->
+<div class="event-card" data-date="2024-11-05" data-category="sports" data-location="chicago">
+    <h2>Marathon 2024</h2>
+    <p>Date: 2024-11-05</p>
+    <p>Location: Chicago, IL</p>
+    <p>Description: Participate in the annual Chicago marathon event.</p>
+    <p>Tickets Available: Yes</p>
+</div>
+
+<!-- Event Card 5 -->
+<div class="event-card" data-date="2024-12-25" data-category="holiday" data-location="miami">
+    <h2>Holiday Gala</h2>
+    <p>Date: 2024-12-25</p>
+    <p>Location: Miami, FL</p>
+    <p>Description: Celebrate the holiday season with a grand gala.</p>
+    <p>Tickets Available: No</p>
+</div>
+    <!-- Additional event cards can be added here -->
+   
+</section>
+
+
+
+        <!-- Additional event cards can be added here -->
+         
+    </section>
+   <!-- footer section starts  -->
+   <section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>branches</h3>
+        <a href="#"> <i class="fas fa-map-marker-alt"></i> bangalore </a>
+        <a href="#"> <i class="fas fa-map-marker-alt"></i> hyderabad </a>
+        <a href="#"> <i class="fas fa-map-marker-alt"></i> delhi </a>
+        <a href="#"> <i class="fas fa-map-marker-alt"></i> kolkata </a>
+        <a href="#"> <i class="fas fa-map-marker-alt"></i> chennai </a>
+      </div>
+
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+        <a href="#"> <i class="fas fa-arrow-right"></i> service </a>
+        <a href="#"> <i class="fas fa-arrow-right"></i> about </a>
+        <a href="#"> <i class="fas fa-arrow-right"></i> gallery </a>
+        <a href="#"> <i class="fas fa-arrow-right"></i> price </a>
+        <a href="#"> <i class="fas fa-arrow-right"></i> reivew </a>
+        <a href="#"> <i class="fas fa-arrow-right"></i> contact </a>
+      </div>
+
+      <div class="box">
+        <h3>contact info</h3>
+        <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+        <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+        <a href="#"> <i class="fas fa-envelope"></i> abc@gmail.com </a>
+        <a href="#"> <i class="fas fa-envelope"></i> abcd@gmail.com </a>
+        <a href="#">
+          <i class="fas fa-map-marker-alt"></i> bangalore, india - 560054
+        </a>
+      </div>
+
+      <div class="box">
+        <h3>follow us</h3>
+        <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+        <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+        <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+        <a href="#"> <i class="fab fa-linkedin-in"></i> linkedin </a>
+      </div>
+    </div>
+
+    <div class="credit">
+      created by <span>Web-07</span> | all rights reserved
+    </div>
+  </section>
+  <script>
+    // Function to filter events based on the search and filter criteria
+    function filterEvents() {
+        // Get filter values
+        const searchTerm = document.getElementById('searchBar').value.toLowerCase();
+        const selectedDate = document.getElementById('dateFilter').value;
+        const selectedCategory = document.getElementById('categoryFilter').value;
+        const selectedLocation = document.getElementById('locationFilter').value;
+    
+        // Get all event cards
+        const eventCards = document.querySelectorAll('.event-card');
+    
+        // Loop through event cards and apply filtering logic
+        eventCards.forEach(card => {
+            const date = card.getAttribute('data-date');
+            const category = card.getAttribute('data-category');
+            const location = card.getAttribute('data-location');
+            const title = card.querySelector('h2').textContent.toLowerCase();
+            const description = card.querySelector('p').textContent.toLowerCase();
+    
+            // Check if the card matches the filters
+            const matchesSearch = title.includes(searchTerm) || description.includes(searchTerm);
+            const matchesDate = !selectedDate || date === selectedDate;
+            const matchesCategory = !selectedCategory || category === selectedCategory;
+            const matchesLocation = !selectedLocation || location === selectedLocation;
+    
+            // Show or hide the card based on the filters
+            if (matchesSearch && matchesDate && matchesCategory && matchesLocation) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    
+    // Attach event listeners to the filters
+    document.getElementById('searchBar').addEventListener('keyup', filterEvents);
+    document.getElementById('dateFilter').addEventListener('change', filterEvents);
+    document.getElementById('categoryFilter').addEventListener('change', filterEvents);
+    document.getElementById('locationFilter').addEventListener('change', filterEvents);
+    </script>
+    
+   
